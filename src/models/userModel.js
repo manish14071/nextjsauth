@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -18,6 +19,11 @@ const userSchema = new mongoose.Schema({
   isVerified: {
     type: Boolean,
     default: false,
+  },
+  isAdmin:{
+    type:Boolean,
+    default:false
+
   },
   forgotPasswordToken: String,
   forgotPasswordTokenExpiry: Date,
